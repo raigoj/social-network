@@ -1,0 +1,17 @@
+version: '3'
+services:
+  rtforum:
+    build:
+      context: ./go-project
+      dockerfile: Dockerfile
+    ports:
+      - "8009:8009"
+    container_name: rtforum
+  vue-app:
+    build:
+      context: ./vue
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    container_name: vue-app
+
